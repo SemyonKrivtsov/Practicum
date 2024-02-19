@@ -10,15 +10,15 @@ import UIKit
 final class ViewController: UIViewController {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet private weak var scoreLabel: UILabel!
     
-    @IBOutlet weak var historyTextView: UITextView!
+    @IBOutlet private weak var historyTextView: UITextView!
         
-    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet private weak var minusButton: UIButton!
     
-    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet private weak var plusButton: UIButton!
     
-    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet private weak var resetButton: UIButton!
     
     // MARK: - Private property
     private var currentTime: String {
@@ -56,7 +56,7 @@ final class ViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func changeScore(_ sender: UIButton) {
+    @IBAction private func changeScore(_ sender: UIButton) {
         switch sender.tag {
         case 0:
             if currentScore - 1 >= 0 {
